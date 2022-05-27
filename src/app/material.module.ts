@@ -5,6 +5,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {MatMenuModule} from '@angular/material/menu';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 const myModules = [
     MatCardModule,
@@ -12,7 +16,11 @@ const myModules = [
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-    MatIconModule];
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatMenuModule,
+    MatGridListModule];
 
 @NgModule({
     imports: [...myModules],

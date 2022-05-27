@@ -22,3 +22,43 @@
     align-content: center;
     text-align: center;
 }
+
+form{
+    margin-top: 60px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+form h3{
+    font-family:'Fredoka', sans-serif; font-weight: bolder; font-size: 30px;
+    color: rgb(27, 5, 5);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 10 px 0;
+    padding: 20px;
+    outline: none;
+    background: rgb(216, 216, 216);
+    font-size: 17px;
+}
+
+form button{
+    padding: 5px;
+    background: rgb(145, 110, 35);
+    color: rgb(75, 31, 31);
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 10px auto 0;
+    border-radius: 30px;
+}

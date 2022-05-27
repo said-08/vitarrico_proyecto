@@ -1,0 +1,80 @@
+<mat-card>
+  <h1 class="title">Proveedores
+  </h1>
+
+  <div *ngIf="showList">
+    <mat-grid-list cols="3" rowHeight="200px">
+      <mat-grid-tile *ngFor="let item of proveedor" style="overflow-x: hidden">
+        <mat-card class="cardR" (click)="verDetalle(item)" style="cursor: pointer;">
+          <mat-card-content class="dashboard-card-content">
+            <div class="icons">
+              <mat-icon>accessibility</mat-icon>
+            </div>
+            <h5></h5>
+            <div class="cssRow">
+              <span class="cssRow">
+                Nombre: {{item.nombre}}
+              </span>
+            </div>
+            <h5></h5>
+            <div class="cssRow">
+              <span class="cssRow">
+                C.C: <b>{{item.cc}}</b>
+              </span>
+            </div>
+            <h5></h5>
+            <div class="cssRow">
+              <span class="cssRow">
+                Número: <b>{{item.numero}}</b>
+              </span>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div *ngIf="showProv">
+      <form [formGroup]="proveedoresGroup" autocomplete="off" novalidate>
+        <mat-card class="cardcontent">
+          <mat-card-title fxLayoutAlign="center">
+            <label>Datos del Proveedor</label>
+          </mat-card-title>
+          <mat-card-content fxLayout="column" fxLayoutAlign="center">
+            <div fxLayout="row" fxFlex fxLayoutAlign="center center">
+              <mat-form-field fxFlex="60">
+                <mat-icon matPrefix>note</mat-icon>
+                <input matInput formControlName="nombre" id="nombre" placeholder="Nombre Personalizado" />
+              </mat-form-field>
+            </div>
+            <div fxLayout="row" fxFlex fxLayoutAlign="space-between center">
+              <mat-form-field fxFlex>
+                <mat-icon matPrefix>note</mat-icon>
+                <input matInput formControlName="apellido" id="apellido" placeholder="Apellido" />
+              </mat-form-field>
+
+              <mat-form-field fxFlex>
+                <mat-icon matPrefix>edit</mat-icon>
+                <input matInput formControlName="cc" id="cc" placeholder="Cedula de Ciudananía" />
+              </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxFlex fxLayoutAlign="space-between center">
+              <mat-form-field fxFlex>
+                <mat-icon matPrefix>attach_money</mat-icon>
+                <input matInput formControlName="numero" id="numero" placeholder="Número" />
+              </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxFlex fxLayoutAlign="space-between center">
+              <mat-form-field fxFlex>
+                <mat-icon matPrefix>attach_money</mat-icon>
+                <input matInput formControlName="edad" id="edad" placeholder="edad" />
+              </mat-form-field>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+      </form>
+    </div>
+  </div>
+</mat-card>

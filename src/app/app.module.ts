@@ -8,11 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './Pages/home/home.component';
 import { LogInComponent } from './Pages/log-in/log-in.component';
 import { NavbarComponent } from './Componentes/Shared/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductoComponent } from "./producto/producto.component"; 
 
 
 
 import { MaterialModule } from './material.module';
-import { ContactUsComponent } from './Pages/contact-us/contact-us.component'
+import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
+import { SidebarComponent } from './slider/slider.component';
+import { ProveedoresComponent } from './proveedores/proveedores.component'
 
 
 @NgModule({
@@ -21,15 +25,20 @@ import { ContactUsComponent } from './Pages/contact-us/contact-us.component'
     HomeComponent,
     LogInComponent,
     NavbarComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SidebarComponent,
+    ProveedoresComponent,
+    ProductoComponent
   ],
   imports: [
     APP_ROUTING,
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
